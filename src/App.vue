@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-navbar class="main-nav text-center">
+      <b-navbar-nav>
+        <b-nav-item href="https://github.com/phuochau" target="blank">github</b-nav-item>
+        <b-nav-item href="https://www.upwork.com/fl/hauvophuoc" target="blank">upwork</b-nav-item>
+        <b-nav-item href="https://www.linkedin.com/in/hauvo/" target="blank">linkedin</b-nav-item>
+        <b-nav-item href="https://hauvo.medium.com/" target="blank">medium</b-nav-item>
+        <b-nav-item href="https://twitter.com/hauvophuoc" target="blank">twitter</b-nav-item>
+        <b-nav-item href="mailto:kevinvovn@gmail.com" target="blank">email</b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
+    <router-view />
   </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: Poppins, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  line-height: 1.4 !important;
+}
+
+h4 {
+  font-weight: bold !important;
+}
+
+.text-indigo {
+  color: #6610f2;
+}
+
+.main-nav {
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  justify-content: center;
+  font-weight: 600;
+  color: black;
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
 }
 </style>

@@ -16,7 +16,9 @@ export const getPosts = async () => {
 }
 
 export const getPost = async (slug) => {
-  return await api.posts.read({ slug }).catch((err) => {
-    console.error(err)
-  })
+  return await api.posts
+    .read({ slug, include: 'authors,tags' })
+    .catch((err) => {
+      console.error(err)
+    })
 }

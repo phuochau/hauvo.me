@@ -2,7 +2,9 @@
   <div class="container post-content">
     <b-spinner v-if="loading" label="Spinning"></b-spinner>
     <template v-else>
-      <h1 class="mb-5">{{ post.title }}</h1>
+      <h1 class="mb-2">{{ post.title }}</h1>
+      <h5 class="mb-3">{{ post.custom_excerpt }}</h5>
+      <div class="tags text-secondary mb-5">{{ tags }}</div>
       <div class="text-left" v-html="post.html" />
     </template>
   </div>
@@ -37,6 +39,12 @@ export default {
     },
     ogDescription() {
       return _.get(this.post, 'og_description')
+    },
+    tags() {
+      return _.get(this.post, 'tags', [])
+        .filter((item) => item.slug !== 'portfolio')
+        .map((item) => item.name)
+        .join(', ')
     }
   },
   async beforeMount() {
@@ -70,3 +78,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.tags {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+</style>

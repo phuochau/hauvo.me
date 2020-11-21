@@ -22,9 +22,14 @@
       </b-navbar-nav>
     </b-navbar>
     <Nuxt />
-    <footer class="page-footer font-small blue">
+    <footer class="container page-footer font-small pl-md-5 pr-md-5">
       <div class="footer-copyright text-center py-3">
         I'm coding with ❤️, 🎶 and drinking ☕ when you're reading this page.
+        <br />This page was built with <a href="https://vuejs.org/">VueJS</a>,
+        <a href="https://nuxtjs.org/">NuxtJS</a> and
+        <a href="https://ghost.org/">Ghost</a>. Thank you
+        <a href="https://www.netlify.com/">Netlify</a> and
+        <a href="https://heroku.com/">Heroku</a> for free hostings.
       </div>
     </footer>
   </div>

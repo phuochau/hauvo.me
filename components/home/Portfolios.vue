@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container-fluid d-flex flex-column align-items-center justify-content-center"
+    class="section container-fluid d-flex flex-column align-items-center justify-content-center"
   >
     <div class="row">
       <b-spinner v-if="loading" label="Spinning"></b-spinner>

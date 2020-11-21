@@ -42,6 +42,11 @@
   min-height: 100%;
 }
 
+.section {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 h1 {
   font-weight: bold;
   line-height: 1.4 !important;
@@ -49,6 +54,14 @@ h1 {
 
 h4 {
   font-weight: bold !important;
+}
+
+a {
+  color: #6610f2;
+
+  &:hover {
+    color: #6610f2;
+  }
 }
 
 .text-indigo {

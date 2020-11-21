@@ -1,11 +1,18 @@
 <template>
-  <div class="container header-container">
+  <div class="container section header-container">
+    <b-img
+      src="https://gravatar.com/avatar/4a663b7032efa5ed8dab36c83d8bd201?s=180"
+      rounded="circle"
+      alt="Hau Vo"
+      class="mb-5"
+      thumbnail
+    ></b-img>
     <h4 class="mb-3">
-      Hi, this is <span class="text-indigo">Hau Vo</span> (aka Kevin)!👋
+      Hi, this is <span class="text-indigo">Hau Vo</span> (aka Kevin)! 👋
     </h4>
     <div class="col-md-10 offset-md-1">
       <h1>
-        As a tech product builder, technical architect, I work from
+        As a product builder, technical architect, I can work from
         <span class="text-indigo"
           >draft ideas and turn them into real products</span
         >
@@ -17,6 +24,6 @@
 
 <style lang="scss" scoped>
 .header-container {
-  margin-bottom: 8rem;
+  margin-top: 0;
 }
 </style>

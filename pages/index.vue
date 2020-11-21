@@ -2,16 +2,22 @@
   <div>
     <Header />
     <Portfolios />
+    <Testimonials />
+    <ContactMe />
   </div>
 </template>
 <script>
 import Header from '~/components/home/Header'
 import Portfolios from '~/components/home/Portfolios'
+import Testimonials from '~/components/home/Testimonials'
+import ContactMe from '~/components/home/ContactMe'
 
 export default {
   components: {
     Header,
-    Portfolios
+    Portfolios,
+    Testimonials,
+    ContactMe
   },
   data() {
     return {

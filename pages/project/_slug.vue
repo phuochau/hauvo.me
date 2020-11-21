@@ -13,10 +13,6 @@ import _ from 'lodash'
 import { getPost } from '~/api'
 
 export default {
-  async asyncData({ params, $http }) {
-    const post = await getPost(params.slug)
-    return { post, loading: false }
-  },
   data() {
     return {
       post: null,
@@ -43,8 +39,13 @@ export default {
       return _.get(this.post, 'og_description')
     },
   },
+  async beforeMount() {
+    const slug = _.get(this.$route, 'params.slug')
+    const post = await getPost(slug)
+    this.post = post
+    this.loading = false
+  },
   head() {
-    console.log(this.post)
     return {
       title: this.title,
       meta: [

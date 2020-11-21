@@ -13,10 +13,12 @@ import _ from 'lodash'
 import { getPost } from '~/api'
 
 export default {
+  async asyncData({ params, $http }) {
+    const post = await getPost(params.slug)
+    return { post, loading: false }
+  },
   data() {
-    const slug = _.get(this.$route, 'params.slug', 'welcome')
     return {
-      slug,
       post: null,
       loading: true,
     }
@@ -29,7 +31,7 @@ export default {
       return _.get(this.post, 'custom_excerpt')
     },
     url() {
-      return _.get(this.post, 'url')
+      return `https://www.hauvo.me/project/${_.get(this.post, 'slug')}`
     },
     ogTitle() {
       return _.get(this.post, 'og_title')
@@ -41,24 +43,27 @@ export default {
       return _.get(this.post, 'og_description')
     },
   },
-  async mounted() {
-    const data = await getPost(this.slug)
-    console.log(data)
-    this.post = data
-    this.loading = false
-  },
   head() {
+    console.log(this.post)
     return {
       title: this.title,
       meta: [
         { name: 'description', content: this.description },
+        { name: 'robots', content: 'index,follow' },
         { property: 'og:title', content: this.ogTitle },
-        { property: 'og:site_name', content: "Hau Vo's portfolio" },
+        {
+          property: 'og:site_name',
+          content: "Hau Vo's portfolio",
+        },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: this.ogImage },
         { property: 'og:description', content: this.ogDescription },
         { property: 'og:url', content: this.url },
-        { name: 'robots', content: 'index,follow' },
+        { property: 'twitter:site', content: '@hauvophuoc' },
+        { property: 'twitter:creator', content: '@hauvophuoc' },
+        { property: 'twitter:title', content: this.title },
+        { property: 'twitter:description', content: this.description },
+        { property: 'twitter:image', content: this.ogImage },
       ],
     }
   },

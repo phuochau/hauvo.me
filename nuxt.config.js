@@ -15,9 +15,7 @@ export default {
           'As a tech product builder, technical architect, I work from draft ideas and turn them into real products that can serve millions of people',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

@@ -2,7 +2,7 @@
   <div id="app" class="pl-md-5 pr-md-5">
     <b-navbar class="main-nav text-center">
       <b-navbar-nav>
-        <b-nav-item to="/" target="blank">home</b-nav-item>
+        <b-nav-item to="/">home</b-nav-item>
         <b-nav-item href="https://github.com/phuochau" target="blank"
           >github</b-nav-item
         >

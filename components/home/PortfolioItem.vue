@@ -1,7 +1,12 @@
 <template>
   <b-link :to="ref" class="portfolio-link">
     <div class="portfolio-item">
-      <b-img-lazy class="mb-3" fluid rounded :src="image"></b-img-lazy>
+      <b-img-lazy
+        class="portfolio-image mb-3"
+        fluid
+        rounded
+        :src="image"
+      ></b-img-lazy>
       <h6 class="portfolio-item-title text-indigo">{{ name }}</h6>
       <h4 class="portfolio-item-slogan">{{ slogan }}</h4>
       <div class="portfolio-item-tag text-secondary">{{ tags }}</div>
@@ -65,11 +70,14 @@ export default {
     text-decoration: none;
   }
 
-  .portfolio-item-title {
-    font-weight: bold;
+  .portfolio-image {
+    height: 400px;
+    width: 100%;
+    object-fit: contain;
   }
 
-  .portfolio-item-slogan {
+  .portfolio-item-title {
+    font-weight: bold;
   }
 
   .portfolio-item-tag {

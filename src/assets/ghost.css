@@ -1,4 +1,8 @@
-.post-full-content img {
+.post-content {
+  margin-bottom: 8rem;
+}
+
+.post-content img {
   max-width: 100%;
 }
 

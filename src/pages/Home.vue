@@ -1,17 +1,17 @@
 <template>
   <div>
     <Header />
-    <Portfolio />
+    <Portfolios />
   </div>
 </template>
 <script>
 import Header from '@/components/home/Header'
-import Portfolio from '@/components/home/Portfolio'
+import Portfolios from '@/components/home/Portfolios'
 
 export default {
   components: {
     Header,
-    Portfolio
+    Portfolios
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="pl-md-5 pr-md-5">
     <b-navbar class="main-nav text-center">
       <b-navbar-nav>
         <b-nav-item href="https://github.com/phuochau" target="blank">github</b-nav-item>
@@ -7,7 +7,7 @@
         <b-nav-item href="https://www.linkedin.com/in/hauvo/" target="blank">linkedin</b-nav-item>
         <b-nav-item href="https://hauvo.medium.com/" target="blank">medium</b-nav-item>
         <b-nav-item href="https://twitter.com/hauvophuoc" target="blank">twitter</b-nav-item>
-        <b-nav-item href="mailto:kevinvovn@gmail.com" target="blank">email</b-nav-item>
+        <b-nav-item href="mailto:kevinvovn@gmail.com">email</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
     <router-view />

@@ -26,6 +26,7 @@
 #app {
   text-align: center;
   font-family: Poppins, sans-serif;
+  min-height: 100%;
 }
 
 h1 {

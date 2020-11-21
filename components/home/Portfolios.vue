@@ -1,9 +1,11 @@
 <template>
-  <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
+  <div
+    class="container-fluid d-flex flex-column align-items-center justify-content-center"
+  >
     <div class="row">
       <b-spinner v-if="loading" label="Spinning"></b-spinner>
-      <div v-else class="col-md-6" v-for="item in projects" :key="item.id">
-       <PortfolioItem :data="item" />
+      <div v-for="item in projects" v-else :key="item.id" class="col-md-6">
+        <PortfolioItem :data="item" />
       </div>
     </div>
   </div>
@@ -15,19 +17,19 @@ import PortfolioItem from './PortfolioItem'
 
 export default {
   components: {
-    PortfolioItem
+    PortfolioItem,
   },
-  data () {
+  data() {
     return {
       loading: true,
-      projects: []
+      projects: [],
     }
   },
-  async mounted () {
+  async mounted() {
     const data = await getPosts()
     this.projects = data
     this.loading = false
-  }
+  },
 }
 </script>
 

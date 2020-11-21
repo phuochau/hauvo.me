@@ -3,64 +3,64 @@
     <b-spinner v-if="loading" label="Spinning"></b-spinner>
     <template v-else>
       <h1 class="mb-5">{{ post.title }}</h1>
-      <div v-html="post.html" class="text-left"/>
+      <div class="text-left" v-html="post.html" />
     </template>
   </div>
 </template>
 
 <script>
-import { getPost } from '@/api'
 import _ from 'lodash'
+import { getPost } from '~/api'
 
 export default {
-  data () {
+  data() {
     const slug = _.get(this.$route, 'params.slug', 'welcome')
     return {
       slug,
       post: null,
-      loading: true
+      loading: true,
     }
   },
   computed: {
-    title () {
+    title() {
       return _.get(this.post, 'title')
     },
-    description () {
+    description() {
       return _.get(this.post, 'custom_excerpt')
     },
-    url () {
+    url() {
       return _.get(this.post, 'url')
     },
-    ogTitle () {
+    ogTitle() {
       return _.get(this.post, 'og_title')
     },
-    ogImage () {
+    ogImage() {
       return _.get(this.post, 'og_image')
     },
-    ogDescription () {
+    ogDescription() {
       return _.get(this.post, 'og_description')
-    }
+    },
   },
-  async mounted () {
+  async mounted() {
     const data = await getPost(this.slug)
     console.log(data)
     this.post = data
     this.loading = false
   },
-  metaInfo() {
+  head() {
     return {
       title: this.title,
       meta: [
-          { name: 'description', content: this.description },
-          { property: 'og:title', content: this.ogTitle },
-          { property: 'og:site_name', content: "Hau Vo's portfolio"},
-          { property: 'og:type', content: 'website'},    
-          { property: 'og:image', content: this.ogImage },
-          { property: 'og:description', content: this.ogDescription },
-          { property: 'og:url', content: this.url },
-          { name: 'robots', content: 'index,follow'} 
-      ]
-    };
-  }
+        { name: 'description', content: this.description },
+        { property: 'og:title', content: this.ogTitle },
+        { property: 'og:site_name', content: "Hau Vo's portfolio" },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: this.ogImage },
+        { property: 'og:description', content: this.ogDescription },
+        { property: 'og:url', content: this.url },
+        { name: 'robots', content: 'index,follow' },
+      ],
+    }
+  },
 }
 </script>

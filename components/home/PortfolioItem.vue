@@ -15,34 +15,37 @@ export default {
   props: {
     data: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
-    ref () {
+    ref() {
       return {
-        path: `/project/${this.slug}`
+        path: `/project/${this.slug}`,
       }
     },
-    id () {
+    id() {
       return this.data.id
     },
-    slug () {
+    slug() {
       return this.data.slug
     },
-    image () {
+    image() {
       return this.data.feature_image
     },
-    name () {
+    name() {
       return this.data.title
     },
-    slogan () {
+    slogan() {
       return this.data.custom_excerpt
     },
-    tags () {
-      return _.get(this.data, 'tags', []).filter(item => item.slug !== 'portfolio').map(item => item.name).join(', ')
-    }
-  }
+    tags() {
+      return _.get(this.data, 'tags', [])
+        .filter((item) => item.slug !== 'portfolio')
+        .map((item) => item.name)
+        .join(', ')
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

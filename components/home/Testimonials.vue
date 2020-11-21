@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid section">
     <div class="row">
-      <div v-for="(item, index) in data" :key="index" class="col-md-4">
+      <div v-for="(item, index) in data" :key="index" class="col-md-4 mb-5">
         <blockquote class="blockquote test-item">
           <p class="mb-2 font-italic">"{{ item.content }}"</p>
           <footer class="blockquote-footer">

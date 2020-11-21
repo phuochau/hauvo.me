@@ -1,6 +1,6 @@
 <template>
   <b-link :to="ref" class="portfolio-link">
-    <div class="portfolio-item">
+    <div class="portfolio-item pl-md-5 pr-md-5">
       <b-img-lazy
         class="portfolio-image mb-3"
         fluid
@@ -71,9 +71,9 @@ export default {
   }
 
   .portfolio-image {
-    height: 400px;
+    height: 300px;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .portfolio-item-title {

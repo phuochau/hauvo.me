@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       post: null,
-      loading: true,
+      loading: true
     }
   },
   computed: {
@@ -37,7 +37,7 @@ export default {
     },
     ogDescription() {
       return _.get(this.post, 'og_description')
-    },
+    }
   },
   async beforeMount() {
     const slug = _.get(this.$route, 'params.slug')
@@ -54,7 +54,7 @@ export default {
         { property: 'og:title', content: this.ogTitle },
         {
           property: 'og:site_name',
-          content: "Hau Vo's portfolio",
+          content: "Hau Vo's portfolio"
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: this.ogImage },
@@ -64,9 +64,9 @@ export default {
         { property: 'twitter:creator', content: '@hauvophuoc' },
         { property: 'twitter:title', content: this.title },
         { property: 'twitter:description', content: this.description },
-        { property: 'twitter:image', content: this.ogImage },
-      ],
+        { property: 'twitter:image', content: this.ogImage }
+      ]
     }
-  },
+  }
 }
 </script>

@@ -11,7 +11,7 @@ import Portfolios from '~/components/home/Portfolios'
 export default {
   components: {
     Header,
-    Portfolios,
+    Portfolios
   },
   data() {
     return {
@@ -19,7 +19,7 @@ export default {
       description:
         'As a tech product builder, technical architect, I work from draft ideas and turn them into real products that can serve millions of people',
       image:
-        'https://gravatar.com/avatar/4a663b7032efa5ed8dab36c83d8bd201?s=512',
+        'https://gravatar.com/avatar/4a663b7032efa5ed8dab36c83d8bd201?s=512'
     }
   },
   head() {
@@ -32,7 +32,7 @@ export default {
         { property: 'og:type', content: 'website' },
         {
           property: 'og:image',
-          content: this.image,
+          content: this.image
         },
         { property: 'og:description', content: this.description },
         { property: 'og:url', content: 'https://www.hauvo.me' },
@@ -41,9 +41,9 @@ export default {
         { property: 'twitter:creator', content: '@hauvophuoc' },
         { property: 'twitter:title', content: this.title },
         { property: 'twitter:description', content: this.description },
-        { property: 'twitter:image', content: this.image },
-      ],
+        { property: 'twitter:image', content: this.image }
+      ]
     }
-  },
+  }
 }
 </script>

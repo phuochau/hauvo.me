@@ -15,13 +15,13 @@ export default {
   props: {
     data: {
       type: Object,
-      default: () => ({}),
-    },
+      default: () => ({})
+    }
   },
   computed: {
     ref() {
       return {
-        path: `/project/${this.slug}`,
+        path: `/project/${this.slug}`
       }
     },
     id() {
@@ -44,8 +44,8 @@ export default {
         .filter((item) => item.slug !== 'portfolio')
         .map((item) => item.name)
         .join(', ')
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

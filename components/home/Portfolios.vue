@@ -17,19 +17,19 @@ import PortfolioItem from './PortfolioItem'
 
 export default {
   components: {
-    PortfolioItem,
+    PortfolioItem
   },
   data() {
     return {
       loading: true,
-      projects: [],
+      projects: []
     }
   },
   async mounted() {
     const data = await getPosts()
     this.projects = data
     this.loading = false
-  },
+  }
 }
 </script>
 

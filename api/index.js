@@ -4,7 +4,7 @@ import GhostContentAPI from '@tryghost/content-api'
 const api = new GhostContentAPI({
   url: 'https://hauvo-me-back.herokuapp.com',
   key: 'd33547440438a4ae42c4785228',
-  version: 'v3',
+  version: 'v3'
 })
 
 export const getPosts = async () => {

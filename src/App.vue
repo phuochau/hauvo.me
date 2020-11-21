@@ -11,6 +11,15 @@
       </b-navbar-nav>
     </b-navbar>
     <router-view />
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">I'm coding with ❤️, 🎶 and drinking ☕ when you're reading this page.</div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
   </div>
 </template>
 <style lang="scss">

@@ -2,9 +2,9 @@
   <div
     class="section container-fluid d-flex flex-column align-items-center justify-content-center"
   >
+    <b-spinner v-if="loading" label="Updating..." class="mb-5"></b-spinner>
     <div class="row">
-      <b-spinner v-if="loading" label="Spinning"></b-spinner>
-      <div v-for="item in projects" v-else :key="item.id" class="col-md-6">
+      <div v-for="item in projects" :key="item.id" class="col-md-6">
         <PortfolioItem :data="item" />
       </div>
     </div>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 import { getPosts } from '@/api'
 import PortfolioItem from './PortfolioItem'
 
@@ -21,14 +22,19 @@ export default {
   },
   data() {
     return {
-      loading: true,
-      projects: []
+      loading: true
     }
+  },
+  computed: {
+    ...mapState('app', ['projects'])
   },
   async mounted() {
     const data = await getPosts()
-    this.projects = data
+    this.setProjects(data)
     this.loading = false
+  },
+  methods: {
+    ...mapMutations('app', ['setProjects'])
   }
 }
 </script>

@@ -1,11 +1,13 @@
 <template>
   <div class="container post-content">
     <b-spinner v-if="loading" class="mb-3" label="Spinning"></b-spinner>
-    <template>
-      <h1 class="mb-2">{{ about.title }}</h1>
-      <h5 class="mb-3">{{ about.custom_excerpt }}</h5>
-      <div class="text-left" v-html="about.html" />
-    </template>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-8 offset-md-2">
+        <h1 class="mb-2">{{ about.title }}</h1>
+        <h5 class="mb-3">{{ about.custom_excerpt }}</h5>
+        <div class="text-left" v-html="about.html" />
+      </div>
+    </div>
   </div>
 </template>
 

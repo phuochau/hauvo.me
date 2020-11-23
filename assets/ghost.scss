@@ -62,7 +62,14 @@
 .kg-gallery-row .kg-gallery-image img {
   max-width: 100%;
   object-fit: cover;
-  max-height: 200px;
+  max-height: 350px;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .kg-gallery-row .kg-gallery-image img {
+    max-height: 150px;
+  }
 }
 
 .kg-bookmark-card {

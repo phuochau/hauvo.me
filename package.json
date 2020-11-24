@@ -6,9 +6,10 @@
     "dev": "yarn lint --fix && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate && cp _redirects dist",
+    "generate": "node data/sync.js && nuxt generate && cp _redirects dist",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "data-sync": "node data/sync.js"
   },
   "dependencies": {
     "@tryghost/content-api": "^1.4.10",

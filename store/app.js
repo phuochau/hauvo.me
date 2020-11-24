@@ -1,6 +1,9 @@
+import projects from '../data/projects.json'
+import about from '../data/about.json'
+
 export const state = () => ({
-  projects: [],
-  about: {}
+  projects,
+  about
 })
 
 export const mutations = {

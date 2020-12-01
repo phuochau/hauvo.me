@@ -1,6 +1,6 @@
 # hauvo.me
 
-This is my portfolio site, it was built by VueJS, NuxtJS and Ghost blogging platform. The ghost headless is hosting on Heroku and the static site is hosting on Netlify.
+This is my portfolio site, it was built by VueJS, NuxtJS and Ghost blogging platform. The ghost headless is hosting on Heroku and the static site is hosting on Netlify. 
 
 Visit the site at [www.hauvo.me](https://www.hauvo.me)
 

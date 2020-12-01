@@ -2,8 +2,8 @@ import GhostContentAPI from '@tryghost/content-api'
 
 // Create API instance with site credentials
 const api = new GhostContentAPI({
-  url: 'https://hauvo-me-back.herokuapp.com',
-  key: 'd33547440438a4ae42c4785228',
+  url: process.env.GHOST_URL,
+  key: process.env.GHOST_CONTENT_API_KEY,
   version: 'v3'
 })
 

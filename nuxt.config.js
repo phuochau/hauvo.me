@@ -1,4 +1,8 @@
 export default {
+  env: {
+    GHOST_URL: process.env.GHOST_URL,
+    GHOST_CONTENT_API_KEY: process.env.GHOST_CONTENT_API_KEY
+  },
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 

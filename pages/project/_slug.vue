@@ -55,7 +55,10 @@ export default {
     } catch (e) {
       console.log("Can't load cache")
     }
-    if (cache) this.post = cache
+    if (cache) {
+      this.post = cache
+      this.loading = false
+    }
     const post = await getPost(slug)
     this.post = post
     this.loading = false

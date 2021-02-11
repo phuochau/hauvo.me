@@ -25,13 +25,27 @@ function getPost(slug) {
 
 function sync() {
   getPosts().then((posts) => {
-    console.log('Got posts!')
+    fs.writeFileSync('./data/projects.json', JSON.stringify(posts))
+    for (let i = 0; i < posts.length; i++) {
+      const post = posts[i]
+      const tags = post.tags
+      console.log(post)
+      if (tags.filter((t) => t.slug === 'portfolio').length > 0) {
+        getPost(post.slug).then((data) => {
+          fs.writeFileSync(
+            `./data/portfolio/${post.slug}.json`,
+            JSON.stringify(data)
+          )
+          console.log(`Synchronized ${post.slug}`)
+        })
+      }
+    }
+
     getPost('about').then((about) => {
-      console.log('Got about!')
-      fs.writeFileSync('./data/projects.json', JSON.stringify(posts))
       fs.writeFileSync('./data/about.json', JSON.stringify(about))
-      console.log('Synchronized posts!')
+      console.log('Synchronized about.')
     })
+    console.log('Done!!!')
   })
 }
 

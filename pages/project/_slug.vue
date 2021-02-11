@@ -49,6 +49,13 @@ export default {
   },
   async beforeMount() {
     const slug = _.get(this.$route, 'params.slug')
+    let cache = null
+    try {
+      cache = require(`../../data/portfolio/${slug}`)
+    } catch (e) {
+      console.log("Can't load cache")
+    }
+    if (cache) this.post = cache
     const post = await getPost(slug)
     this.post = post
     this.loading = false

@@ -4,7 +4,11 @@
       <b-navbar-nav>
         <b-nav-item to="/">home</b-nav-item>
         <b-nav-item to="/about">about</b-nav-item>
-        <b-nav-item href="https://docs.google.com/document/d/1O134H5Mdpi-x8eCW0kLnxSsiwS1mwqR9704m7Dbn1rg/edit?usp=sharing" target="_blank">CV</b-nav-item>
+        <b-nav-item
+          href="https://docs.google.com/document/d/1O134H5Mdpi-x8eCW0kLnxSsiwS1mwqR9704m7Dbn1rg/edit?usp=sharing"
+          target="_blank"
+          >CV</b-nav-item
+        >
         <b-nav-item href="mailto:kevinvovn@gmail.com">email</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
